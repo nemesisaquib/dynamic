@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/assets/images/bg-footer.png') !important;
+    background-image: url("/assets/images/bg-footer.png") !important;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
