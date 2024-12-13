@@ -6349,7 +6349,7 @@ a {
 }
 
 .marque-area-home-3.marque-area-home-1 {
-    background: --webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF4B33;), color-stop(80%, #849A2E));
+    background:--webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF4B33;), color-stop(80%, #849A2E));
     background:linear-gradient(180deg, #FF4B33; 10% , #849A2E 80%);
 }
 
@@ -8189,16 +8189,15 @@ a {
 }
 
 .blog-area-home-3.b-page .blog-inner a:hover {
-    color: #FF4B33; !important
+    color: #FF4B33; 
 }
 
 .blog-area-home-3.b-page .blog-inner a:hover span {
-    color: #FF4B33; !important
+    color: #FF4B33; 
 }
 
 .blog-area-home-3.b-page .blog-inner a:hover svg path {
-    fill: #FF4B33; !important
-}
+    fill: #FF4B33; 
 
 .team-area-about-inner {
     position: relative;
@@ -9116,8 +9115,7 @@ a {
 }
 
 .blog-details-area .blog-details-inner .blog-details-comment .blog-details-wrapper-comment .blog-details-comment-info .blog-details-comment-name .blog-details-riplay-btn a:hover {
-    background-color: #FF4B33; !important;
-    color: #000
+    background-color: #FF4B33 !important;
 }
 
 .blog-details-area .blog-details-inner .blog-details-comment .blog-details-wrapper-comment .blog-details-comment-info p {
@@ -10461,23 +10459,3 @@ a {
 
 
 
-
-
-.footer-bg {
-    position: relative;
-}
-
-.footer-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/images/bg-footer.png') !important;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.1; /* Set opacity here */
-    z-index: 0;
-}
