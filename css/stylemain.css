@@ -3354,7 +3354,7 @@ a {
 }
 
 .team-area-about-inner .team-inner .team-thumb::before {
-    background: rgba(204, 255, 0, .1882352941)
+    background: rgba(0, 0, 0, 0.473)
 }
 
 .team-area-about-inner .team-inner .team-name-position {
