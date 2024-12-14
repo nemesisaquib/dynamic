@@ -1,0 +1,65 @@
+<section class="offer-area-home-1 st_box_jump_animation">
+        <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="offer-area-1-shep-1 blur-1">
+        <div class="container">
+            <div class="title">
+                <div class="sub-title">
+                    <p>what we offer</p>
+                </div>
+                <div class="main-title">
+                    <h3 class="split-collab">We Offer A Wide Range Of <br> Digital Marketing</h3>
+                </div>
+            </div>
+            <div class="offer-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-md-6 st_box_animation">
+                        <div class="offer-inner st_box_anim">
+                            <p class="font-size-1-24">UI/UX Design, Motion, <br> Illustration, Branding, <br>
+                                Photography</p>
+                          
+                            <div class="offer-work">
+                                <span class="font-size-1-20">design & UI/UX <br>
+                                    Experience</span>
+                                <a href="services-details.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 21 20" fill="none">
+                                    <path d="M2.00076 15.7281L18.4737 4.58581M4.84375 1L19.5719 3.84299L16.7289 18.5711" stroke="#FF4B33" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 st_box_animation">
+                        <div class="offer-inner st_box_anim">
+                            <p class="font-size-1-24">WordPress, Shopify, <br> Webflow, React, HTML, <br> Mobile
+                                Solutions</p>
+                      
+
+                            <div class="offer-work">
+                                <span class="font-size-1-20">development & <br>
+                                    coding</span>
+                                <a href="services-details.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 21 20" fill="none">
+                                    <path d="M2.00076 15.7281L18.4737 4.58581M4.84375 1L19.5719 3.84299L16.7289 18.5711" stroke="#FF4B33" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 st_box_animation">
+                        <div class="offer-inner st_box_anim">
+                            <p class="font-size-1-24">Social Solutions, <br> Marketing & Targeting, <br> SEO & SMM</p>
+                          
+                            <div class="offer-work">
+                                <span class="font-size-1-20">marketing & SEO <br>
+                                    Analytic</span>
+                                <a href="services-details.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 21 20" fill="none">
+                                    <path d="M2.00076 15.7281L18.4737 4.58581M4.84375 1L19.5719 3.84299L16.7289 18.5711" stroke="#FF4B33" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

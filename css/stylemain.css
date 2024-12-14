@@ -1753,7 +1753,7 @@ a {
     font-weight: 500;
     line-height: 125%;
     text-align: center;
-    background: #1954ed;
+    background: #FF4B33;
     border-radius: 4px;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
@@ -1772,7 +1772,8 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    background: #ccdeff;
+    background: black;
+  
     -webkit-transition: .4s ease-out;
     transition: .4s ease-out;
     z-index: -1;
@@ -1783,7 +1784,8 @@ a {
 }
 
 .btn-2:hover {
-    color: #000
+    transition: all 0.2s ease-in;
+    color: #ffffff
 }
 
 .btn-2:hover::before {
@@ -4834,7 +4836,7 @@ a {
 }
 
 .seo-house-home-2 .seo-house-wrapper .seo-house-inner h3 span {
-    color: #1954ed
+    color: #FF4B33;
 }
 
 .seo-house-home-2 .seo-house-wrapper .seo-house-inner p {
@@ -4937,7 +4939,7 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 18px
+    gap: 90px
 }
 
 @media(max-width: 500px) {
