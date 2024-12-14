@@ -6352,10 +6352,10 @@ a {
     background: linear-gradient(180deg, #F24405 10%, #F24405 80%);
 }
 
-.marque-area-home-3.marque-area-home-1 {
-    background:--webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF4B33;), color-stop(80%, #849A2E));
-    background:linear-gradient(180deg, #FF4B33; 10% , #849A2E 80%);
-}
+    .marque-area-home-3.marque-area-home-1 {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF4B33;), color-stop(80%, #849A2E));
+        background: linear-gradient(180deg, #FF4B33; 10% , #849A2E 80%);
+    }
 
 .marque-area-home-3 img {
     position: relative;
@@ -10459,7 +10459,7 @@ a {
     }
 }
 
-/*# sourceMappingURL=stylemain.css.map */
+
 
 
 
