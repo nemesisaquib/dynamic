@@ -157,4 +157,12 @@
         font-size: 18px; /* Smaller icon size for mobile */
     }
 
+    .footer-area-home-3 .footer-support .footer-call span a{
+        font-size: 16px;
+    }
+
+    .contact-text .font-size-1-26  a{
+        font-size: 14px !important;
+    }
+
 }
