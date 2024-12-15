@@ -33,6 +33,7 @@
     bottom: 30px; 
     left: 30px; /* Positioned on the left */
     transition: height 0.3s ease;
+    z-index: 10;
 }
 
 .fab-container:hover {
