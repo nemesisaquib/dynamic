@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="css/stylemain.css">
     <!--favicon-->
-    <link rel="icon" href="assets/images/favicon.png">
+    <link rel="icon" href="assets/images/favicon.ico" >
 </head>
 
 <body>
@@ -135,6 +135,8 @@
     <!-- End Bread Crumb Area Home 1 -->
 
     <!-- Start Contact Area -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+     <script src="index-Id.js"></script>
     <section class="contact-area-home-3" id="contact">
         <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="contact-area-bg-shep-1-home-3 blur-1">
         <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="contact-area-bg-shep-2-home-3 blur-1">
@@ -254,27 +256,24 @@
                     <div class="form-wrapper">
                         <div class="title">
                             <div class="sub-title sub-title-home-3">
-                                <p>Need Any Help?</p>
+                                <p>Get in Touch</p>
                             </div>
                             <div class="main-title">
-                                <h3 class="split-collab">Get in Touch With Us</h3>
+                                <h3 class="split-collab">We'd love to hear from you. Please fill out the form below!</h3>
                             </div>
                         </div>
-                        <form action="#" class="vre-slide-down-gsap">
+                        <form action="#" class="vre-slide-down-gsap" id="contact-form">
                             <div class="input-item">
-                                <input type="text" required="required" placeholder="Frist Name">
-                                <input type="text" required="required" placeholder="Last Name">
+                                <input type="text" required="required"  id="full-name" name="full_name" placeholder="Full Name">
+                                
                             </div>
                             <div class="input-item">
-                                <input type="text" required="required" placeholder="Phone">
-                                <input type="email" required="required" placeholder="Email Address">
+                                <input type="text" required="required"  id="phone"  name="phone" placeholder="Phone">
+                                <input type="email" required="required"  id="email" name="email" placeholder="Email Address">
                             </div>
-                            <div class="input-item">
-                                <input type="text" required="required" placeholder="Subject">
-                                <input type="text" required="required" placeholder="Website">
-                            </div>
-                            <textarea placeholder="Message"></textarea>
-                            <button class="btn-3">Send Message</button>
+                         
+                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                            <button  type="submit"  class="btn-3">Send Message</button>
                         </form>
                     </div>
                 </div>
