@@ -167,3 +167,33 @@
     }
 
 }
+
+
+
+.blog-area-home-3.b-page .blog-inner a:hover{
+    color: #FF4B33 !important;
+}
+
+.blog-area-home-3 .blog-area-wrapper .blog-inner .blog-writer .blog-learn-more a:hover span{
+    color: #FF4B33 !important;
+}
+
+.blog-area-home-3.b-page .blog-inner a:hover svg path{
+    fill: #FF4B33 !important;
+}
+
+
+.blog-details-area .blog-details-inner .blog-details-post-wrapper .blog-details-post-1 ul li:nth-child(2) svg path{
+    fill: white;
+}
+
+.blog-details-area .blog-details-inner .blog-details-post-wrapper .blog-details-post-1 ul li:nth-child(2) span{
+    color: white;
+}
+
+
+.link-info {
+    display: flex !important;
+    padding: 2px !important;
+
+}
