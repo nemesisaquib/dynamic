@@ -235,3 +235,8 @@
 .message-box.error {
     background-color: #dc3545; /* Red */
 }
+
+
+.footer-area-home-3 .footer-wrapper .footer-item-1 span{
+    display: none;
+}

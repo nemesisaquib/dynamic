@@ -70,3 +70,325 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d46830151.11795828!2d-119.8093025!3d44.24236485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!3m2!1d37.09024!2d-95.712891!5e0!3m2!1sen!2sbd!4v1722100211582!5m2!1sen!2sbd" width="1920" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Lightbox with GSAP Animation</title>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.1/dist/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            width: 320px;
+            height: 320px;
+          
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Filter buttons */
+        .project-grid-btn {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .project-grid-btn ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-grid-btn ul li {
+            display: inline-block;
+            margin: 0 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .project-grid-btn ul li.active {
+            color: #007bff;
+        }
+
+        /* Popup styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+          
+        }
+
+        .popup-image {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transform: scale(0);
+        }
+
+        /* Close button style */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Custom cursor styles */
+        .custom-cursor {
+            position: fixed;
+            pointer-events: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: scale(1);
+            left: -25px; /* Adjust for perfect center alignment */
+            top: -25px;
+              opacity: 0;
+        }
+
+        .custom-cursor.eye {
+            background-color: rgba(255, 255, 255, 0.6);
+            background-image: url('https://img.icons8.com/ios/452/visible.png'); /* Eye cursor icon */
+            background-size: cover;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="project-grid-btn mt-80">
+        <ul>
+            <li class="active" data-filter="*">Show All</li>
+            <li data-filter=".cat-1">Business</li>
+            <li data-filter=".cat-2">Cyber Security</li>
+            <li data-filter=".cat-3">Development</li>
+            <li data-filter=".cat-4">Branding</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="project-item cat-1">
+            <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1" class="project-img">
+        </div>
+        <div class="project-item cat-2">
+            <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2" class="project-img">
+        </div>
+        <div class="project-item cat-3">
+            <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3" class="project-img">
+        </div>
+        <div class="project-item cat-4">
+            <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Project 4" class="project-img">
+        </div>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay">
+        <button class="close-btn" id="close-btn">X</button>
+        <img src="" alt="Popup Image" class="popup-image" id="popup-image">
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <script>
+        // Select all project images
+        const projectImages = document.querySelectorAll('.project-img');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupImage = document.getElementById('popup-image');
+        const closeBtn = document.getElementById('close-btn');
+        const customCursor = document.getElementById('custom-cursor');
+
+        // Open popup on image click
+        projectImages.forEach(img => {
+            img.addEventListener('click', function () {
+                const src = this.src;
+                popupImage.src = src;
+
+                // GSAP Animation to scale image into view
+                gsap.to(popupImage, {
+                    scale: 1,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+
+                popupOverlay.style.display = 'flex';
+            });
+        });
+
+        // Close popup when clicking outside the image or on the close button
+        closeBtn.addEventListener('click', closePopup);
+        popupOverlay.addEventListener('click', function (event) {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        function closePopup() {
+            // GSAP Animation to scale image out
+            gsap.to(popupImage, {
+                scale: 0,
+                duration: 0.5,
+                ease: "power2.in",
+                onComplete: function () {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.project-grid-btn ul li');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to the clicked button
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === '*' || item.classList.contains(filter.slice(1))) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Smooth scroll to the projects section
+                gsap.to(window, { duration: 1, scrollTo: '.container' });
+            });
+        });
+
+        // Cursor movement
+        let mouseX = 0, mouseY = 0;
+        let targetX = 0, targetY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            gsap.to(customCursor, {
+                x: mouseX - 25, // Adjust to center cursor
+                y: mouseY - 25, // Adjust to center cursor
+                duration: 0.1
+            });
+        });
+
+        // Change cursor style on hover over images
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                customCursor.classList.add('eye');  // Show "eye" cursor
+            });
+
+            item.addEventListener('mouseleave', function () {
+                customCursor.classList.remove('eye');  // Reset to default cursor
+            });
+        });
+    </script>
+
+</body>
+
+</html>
