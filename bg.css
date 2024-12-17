@@ -240,3 +240,36 @@
 .footer-area-home-3 .footer-wrapper .footer-item-1 span{
     display: none;
 }
+
+.offer-area-home-3{
+padding-top: 0 !important;
+
+}
+
+.bread-crumb-area{
+    padding-bottom: 0 !important;
+}
+
+#privacy-policy , #terms-of-use{
+    color: white;
+
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.privac-info{
+    display: flex;
+    gap: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.privac-info a {
+    color: #FF4B33 !important;
+    text-decoration: underline !important;
+}
