@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="css/stylemain.css">
     <link rel="stylesheet" href="bg.css">
+    <link rel="stylesheet" href="project.css">
     <!--favicon-->
     <link rel="icon" href="assets/images/favicon.ico">
 </head>
@@ -139,7 +140,7 @@
     <!-- End Recent Work Home 2 -->
 
     <!-- Start Offer Area Home 3 -->
-    <section class="offer-area-home-3 project-grid-area project-p">
+    <!-- <section class="offer-area-home-3 project-grid-area project-p">
         <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="project-grid-area-1-shep-1 blur-1">
         <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="project-grid-area-1-shep-2 blur-1">
         <img src="assets/images/shep/bg-blur-shep-3.png" alt="VRE" class="project-grid-area-1-shep-3 blur-1">
@@ -195,17 +196,55 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.1/dist/gsap.min.js"></script>
+<section class="offer-area-home-3 project-grid-area project-p ">
+
+   
+
+    <div class="project-grid-btn mt-80">
+        <ul>
+            <li class="active" data-filter="*">Show All</li>
+            <li data-filter=".cat-1">Business</li>
+            <li data-filter=".cat-2">Cyber Security</li>
+            <li data-filter=".cat-3">Development</li>
+            <li data-filter=".cat-4">Branding</li>
+        </ul>
+    </div>
+
+    <div class="containert">
+        <div class="project-item cat-1">
+            <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1" class="project-img">
+        </div>
+        <div class="project-item cat-2">
+            <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2" class="project-img">
+        </div>
+        <div class="project-item cat-3">
+            <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3" class="project-img">
+        </div>
+        <div class="project-item cat-4">
+            <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Project 4" class="project-img">
+        </div>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay">
+        <button class="close-btn" id="close-btn">X</button>
+        <img src="" alt="Popup Image" class="popup-image" id="popup-image">
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+</section>
 
 
 
 
 
-
-
-
-
-
+<script src="Project.js"></script>
 
 
 
@@ -292,9 +331,9 @@
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="#Services"> Services </a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact </a></li>
+                                <li><a href="project.html">Portfolio</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact </a></li>
                             </ul>
                         </div>
                     </div>
@@ -370,7 +409,7 @@
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/awadhcreativesolution"><i class="fa-brands fa-instagram"></i></a></li>
                       
                     </ul>
                 </div>
