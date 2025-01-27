@@ -53,7 +53,16 @@
 }
 
 .project-grid-btn ul li.active {
-    color: #FF4B33;
+    color: #FF4B33 !important;
+    background: #070707 !important;
+    transition: all 0.2s ease-in;
+}
+
+.project-grid-btn ul li:hover{
+    transition: all 0.2s ease-in;
+    color: #FF4B33 !important;
+    background: #070707 !important;
+    outline: 1px solid #FF4B33;
 }
 
 /* Popup styles */
