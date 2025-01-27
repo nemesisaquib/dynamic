@@ -3,6 +3,8 @@ const popupOverlay = document.getElementById('popup-overlay');
 const popupImage = document.getElementById('popup-image');
 const closeBtn = document.getElementById('close-btn');
 const customCursor = document.getElementById('custom-cursor');
+const filterBtns = document.querySelectorAll('.project-grid-btn li');
+const projectItems = document.querySelectorAll('.project-item');
 
 // Open popup on image click
 projectImages.forEach(img => {
@@ -41,10 +43,14 @@ function closePopup() {
     });
 }
 
-// Filter functionality
-const filterBtns = document.querySelectorAll('.project-grid-btn ul li');
-const projectItems = document.querySelectorAll('.project-item');
+// Set default state: "Show All" active and all items visible
+document.addEventListener('DOMContentLoaded', () => {
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.project-grid-btn li[data-filter="*"]').classList.add('active');
+    projectItems.forEach(item => item.style.display = 'block');
+});
 
+// Filter functionality
 filterBtns.forEach(btn => {
     btn.addEventListener('click', function () {
         // Remove active class from all buttons
@@ -53,8 +59,10 @@ filterBtns.forEach(btn => {
         // Add active class to the clicked button
         this.classList.add('active');
 
+        // Get filter value
         const filter = this.getAttribute('data-filter');
 
+        // Show/hide items based on filter
         projectItems.forEach(item => {
             if (filter === '*' || item.classList.contains(filter.slice(1))) {
                 item.style.display = 'block';
@@ -62,15 +70,11 @@ filterBtns.forEach(btn => {
                 item.style.display = 'none';
             }
         });
-
-        // Smooth scroll to the projects section
-        gsap.to(window, { duration: 1, scrollTo: '.containert' });
     });
 });
 
 // Cursor movement
 let mouseX = 0, mouseY = 0;
-let targetX = 0, targetY = 0;
 
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
