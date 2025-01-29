@@ -10464,5 +10464,15 @@ a {
 
 
 
+.blog-link-cont  {
+    text-decoration: underline !important;
+}
+
+.blog-link-cont:hover{
+    color: #FF4B33 !important;
+}
 
 
+.blog-details-area .blog-details-inner h4 {
+    font-weight: 600 !important;
+}
