@@ -10476,3 +10476,32 @@ a {
 .blog-details-area .blog-details-inner h4 {
     font-weight: 600 !important;
 }
+
+
+
+.vre-slide-down-gsap {
+    animation: moveUpDown 2s infinite alternate ease-in-out;
+  }
+  
+  .vre-slide-up-gsap {
+    animation: moveUpDownReverse 2s infinite alternate ease-in-out;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes moveUpDownReverse {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
