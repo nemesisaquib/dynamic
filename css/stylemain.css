@@ -10479,11 +10479,11 @@ a {
 
 
 
-.vre-slide-down-gsap {
+.image-move{
     animation: moveUpDown 2s infinite alternate ease-in-out;
   }
   
-  .vre-slide-up-gsap {
+  .image-move{
     animation: moveUpDownReverse 2s infinite alternate ease-in-out;
   }
   
