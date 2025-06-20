@@ -1358,7 +1358,14 @@ a {
 }
 
 .header-area-1 .header-wrapper .logo {
-    width: 15%
+    width: 15%;
+
+}
+
+
+.header-area-1 .header-wrapper .logo img {
+    border-radius: 80px;
+
 }
 
 @media(max-width: 767px) {
