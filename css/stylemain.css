@@ -7024,13 +7024,18 @@ a {
     position: relative;
     padding-top: 60px;
     padding-bottom: 50px;
-    background-color: #031320
+    background-color: #141414
 }
 
 .brand-logo-area-home-3 .brand-logo-inner a {
     -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
-    cursor: unset
+    cursor: unset;
+   
+}
+
+.brand-logo-inner {
+    background: white; padding: 12px; border-radius: 6px;
 }
 
 .brand-logo-area-home-3 .brand-logo-inner a:hover {
