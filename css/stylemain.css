@@ -1368,6 +1368,10 @@ a {
 
 }
 
+.footer-area-home-3 .footer-wrapper .footer-item-1 a img{
+      border-radius: 80px;
+}
+
 @media(max-width: 767px) {
     .header-area-1 .header-wrapper .logo {
         width: 50%;
